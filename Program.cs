@@ -62,7 +62,7 @@ namespace Assignment1._2._3
                     }
                 }
                 Console.WriteLine("Would you like to perform another operation? (y/n)");
-                if (Console.ReadLine() == "y")
+                if (Console.ReadLine().ToLower() == "y")
                 {
                     again = true;
                 }
