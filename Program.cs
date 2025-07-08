@@ -43,9 +43,16 @@ namespace Assignment1._2._3
                             break;
 
                         case "/":
-                            solution = num1 / num2;
+                            if (num2 != 0)
+                            {
+                                solution = num1 / num2;
+                                Console.WriteLine(num1 + "/" + num2 + "=" + solution);
+                            }
+                            else
+                            {
+                                Console.WriteLine("Please divide by a non zero number");
+                            }
                             complete = true;
-                            Console.WriteLine(num1 + "/" + num2 + "=" + solution);
                             break;
                         default:
                             Console.WriteLine("Please enter a valid math operator such as (+, -, /, *)");
@@ -54,8 +61,8 @@ namespace Assignment1._2._3
                             break;
                     }
                 }
-                Console.WriteLine("Would you like to perform another operation? (Y/N");
-                if (Console.ReadLine() == "y" || Console.ReadLine() == "Y")
+                Console.WriteLine("Would you like to perform another operation? (y/n)");
+                if (Console.ReadLine() == "y")
                 {
                     again = true;
                 }
